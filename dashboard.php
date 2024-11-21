@@ -22,7 +22,7 @@
             <div class="BoxDash">
                 <header class="head">
                     <div class="Profile">
-                        <p> Username </p>
+                        <p>  </p>
                         <img src="rrsgs.png">
                     </div>
                 </header>
