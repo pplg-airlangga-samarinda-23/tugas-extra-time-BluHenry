@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if($_SESSION['login'] == false){
+    header('Location: index.php');
+
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +33,7 @@
             <div class="BoxDash">
                 <header class="head">
                     <div class="Profile">
-                        <p>  </p>
+                        <p> BluHenry </p>
                         <img src="rrsgs.png">
                     </div>
                 </header>

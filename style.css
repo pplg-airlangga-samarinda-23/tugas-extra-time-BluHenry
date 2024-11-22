@@ -33,6 +33,7 @@
 }
 
 .input input {
+    width: 60%;
     padding: 10px;
     background-color: bisque;
     margin-bottom: 15px;
@@ -79,7 +80,7 @@
     display: block;
     background-color: rgb(8, 216, 147);
     border: black solid 4px;
-    width: 300px;
+    width: 75%;
     margin: 40px auto;
     padding-bottom: 100px;  
 }
