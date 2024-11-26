@@ -7,15 +7,21 @@ if($_SESSION['login'] == false){
     exit();
 }
 
+require_once('koneksi.php');
+$query = "select * from barang";
+$result = mysqli_query($koneksi,$query)
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Table dashboard tugas </title>
-        <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     </head>
     <body>
         <div class="ContainerBoard">
@@ -55,61 +61,26 @@ if($_SESSION['login'] == false){
                         </thead>
                         <tbody>
                             <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
+                                <?php
+
+                                    while($row = mysqli_fetch_assoc($result)) {
+
+                                ?>
+                                <td> <?php echo $row['No'] ?> </td>
+                                <td> <?php echo $row['Nama_barang'] ?> </td>
+                                <td> <?php echo $row['Pengadaan'] ?> </td>
+                                <td> <?php echo $row['stok'] ?> </td>
+                                <td> <?php echo $row['Baik'] ?> </td>
+                                <td> <?php echo $row['Buruk'] ?> </td>
+                                
                             </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+
+                                <?php
+
+                                    }
+
+                                ?>
+                            
                         </tbody>
                     </table>
                 </div>

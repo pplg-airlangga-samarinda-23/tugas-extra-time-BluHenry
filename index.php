@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['login'] = true;
             header('Location: dashboard.php');
         }else {
-            echo "<script>alert('Gagal')</script>";
+            echo "<script>alert('Gagal Login')</script>";
         }
         // header("Location: dashboard.php");
 
